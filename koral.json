@@ -1,0 +1,32 @@
+{
+  "schemaVersion": 1,
+  "name": "ISC_Lab1",
+  "color": [
+    0.879,
+    0.844,
+    0.451
+  ],
+  "frameworkVersion": "0.0.4",
+  "kind": "Scene",
+  "rendering": {
+    "api": "Vulkan",
+    "window": {
+      "width": 1280,
+      "height": 720,
+      "resizable": true,
+      "fullscreen": false,
+      "borderless": false,
+      "transparent": false,
+      "vsync": true
+    }
+  },
+  "paths": {
+    "assetDirectories": [
+      "assets"
+    ],
+    "shaderDirectories": [
+      "shaders"
+    ]
+  },
+  "libraries": []
+}
