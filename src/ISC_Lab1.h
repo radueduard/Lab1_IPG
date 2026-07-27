@@ -10,7 +10,7 @@ class ISC_Lab1 final : public kor::Scene
 public:
     void Initialize() override;
     void Render(kor::CommandBuffer& commandBuffer) override;
-    void RenderUI(ImGuiContext* context) override;
+    void RenderUI() override;
 
     static constexpr glm::uvec2 CANVAS_SIZE { 1280, 720 };
 

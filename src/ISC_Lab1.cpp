@@ -186,7 +186,6 @@ void ISC_Lab1::Render(kor::CommandBuffer& commandBuffer)
     commandBuffer
         .ClearColorImage(renderTarget)
         .ForEach(shapes, [this](auto& cb, const auto& shape) {
-            cb.ImageBarrier({ renderTarget, kor::ResourceAccess::ComputeReadWrite });
             std::visit([&](const auto& s) {
                 using T = std::decay_t<decltype(s)>;
                 if constexpr (std::is_same_v<T, Circle>)
@@ -205,7 +204,7 @@ void ISC_Lab1::Render(kor::CommandBuffer& commandBuffer)
         .Blit(renderTarget);
 }
 
-void ISC_Lab1::RenderUI(ImGuiContext* context)
+void ISC_Lab1::RenderUI()
 {
     // Split the node the engine's dockspace put "Shapes" in, one frame after that node is
     // known. Skipped entirely when "Properties" already has a dock id, so a layout restored
